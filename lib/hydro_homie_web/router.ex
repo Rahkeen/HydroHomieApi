@@ -17,7 +17,7 @@ defmodule HydroHomieWeb.Router do
   scope "/api", HydroHomieWeb do
     pipe_through :api
 
-    resources "/days", DayController
+    resources "/days", DayController, only: [:index, :show]
   end
 
   # Enables LiveDashboard only for development
